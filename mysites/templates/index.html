@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <h1>用户输入:</h1>
+    <form action="/index/" method="post">
+        <input type="text" name="username" value="please input your username" />
+        <input type="password" name="password" />
+        <input type="submit" value="Commit" />
+    </form>
+
+    <div>
+        <table>
+            <thead>
+                <th>username</th>
+                <th>password</th>
+            </thead>
+            <tbody>
+                {% for line in data %}
+                    <tr>
+                        <td>{{ line.user }}</td>
+                        <td>{{ line.pwd }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+<script type="text/javascript" src="/static/js/jquery-2.0.3.min.js"></script>
+</body>
+</html>
